@@ -8,7 +8,8 @@ const domain = process.env.PRODUCTION_DOMAIN;
 module.exports = merge(commonConfig, {
     mode: "production",
     output: {
-        filename: '[name].[contenthash:12].js'
+        filename: '[name].[contenthash:12].js',
+        publicPath: '/container/latest/'
     },
     // module: {
     //     rules: [

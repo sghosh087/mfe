@@ -6,8 +6,7 @@ const packageJson = require('../package.json');
 module.exports = merge(commonConfig, {
     mode: "production",
     output: {
-        filename: '[name].[contenthash:12].js',
-        publicPath: '/container/latest/'
+        filename: '[name].[contenthash:12].js'
     },
     // module: {
     //     rules: [
