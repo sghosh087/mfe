@@ -22,27 +22,27 @@ module.exports = merge(commonConfig, {
         //     writeToDisk: true
         // }
     },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                exclude: /\.module\.css/,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.css$/,
-                include: /\.module\.css/,
-                use: ['style-loader', {
-                    loader: 'css-loader',
-                    options: {
-                        module: {
-                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
-                        }
-                    }
-                }]
-            }
-        ]
-    },
+    // module: {
+    //     rules: [
+    //         {
+    //             test: /\.css$/,
+    //             exclude: /\.module\.css/,
+    //             use: ['style-loader', 'css-loader']
+    //         },
+    //         {
+    //             test: /\.css$/,
+    //             include: /\.module\.css/,
+    //             use: ['style-loader', {
+    //                 loader: 'css-loader',
+    //                 options: {
+    //                     module: {
+    //                         localIdentName: '[path][name]__[local]--[hash:base64:5]'
+    //                     }
+    //                 }
+    //             }]
+    //         }
+    //     ]
+    // },
 
     plugins: [
         new ModuleFederationPlugin({
